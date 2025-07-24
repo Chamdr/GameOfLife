@@ -22,6 +22,7 @@ if (args.length) {
     console.log('oops, no args ?');
 
 }
+export function getAliveNeighboursCount(grid: number[][], rowIndex: number, cellIndex: number): number { // this is not pretty, Int find something better 
 
 function getAliveNeighboursCount(grid: number[][], rowIndex: number, cellIndex: number): number { // this is not pretty, Int find something better 
     let neighbours = 0
@@ -63,6 +64,7 @@ function getAliveNeighboursCount(grid: number[][], rowIndex: number, cellIndex: 
 }
 
 function isCellStillAlive(cellState: number, aliveNeighboursCount: number): number {
+export function isCellStillAlive(cellState: number, aliveNeighboursCount: number): number {
     if (cellState == 1) {
         // if 2 or 3 alive neighbours stay alive else dies
         return aliveNeighboursCount == 2 || aliveNeighboursCount == 3 ? 1 : 0;
